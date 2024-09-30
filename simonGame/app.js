@@ -96,3 +96,22 @@ function updateHighScore(score) {
     h3.innerHTML = `High Score: <b><i>${highScore}</i></b>`;
   }
 }
+
+
+// Display the Steps to play the game
+let div = document.querySelector(".main");
+let start = document.querySelector("#start");
+
+window.onload = function () {
+  console.log("Window Loaded");
+  setTimeout(() => {
+    div.style.display = "block";
+  }, 1500);
+
+  start.addEventListener("click", function () {
+    setTimeout( () => {
+      div.style.display = "none";
+    }, 500);
+  });
+  
+}
