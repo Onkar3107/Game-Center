@@ -39,3 +39,26 @@ body {
 .userFlash {
     background-color: green;
 }
+
+.main {
+    margin: 20vmin;
+    border: 1px solid black;
+    z-index: 1;
+    position: fixed;
+    background-color: #7b506f;
+}
+
+.main p {
+    color: #ead7d1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 2vmin;
+}
+
+.main button {
+    color: #7b506f;
+    background-color: #ead7d1;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 2vmin;
+}
