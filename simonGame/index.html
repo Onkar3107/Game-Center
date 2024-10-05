@@ -8,19 +8,35 @@
   </head>
   <body>
     <h1>Simon Game!!</h1>
-    <h2>Press any key to start the game.</h2>
+    <h2></h2>
     <h3>High Score = 0</h3>
 
     <div class="main">
       <div id="disclaimer">
-        <p>
-          Simon is an electronic game of memory skill invented by Ralph H. Baer
-          and Howard J. Morrison, with software programming by Lenny Cope. The
-          device creates a series of tones and lights and requires a user to
-          repeat the sequence. If the user succeeds, the series becomes
-          progressively longer and more complex. Once the user fails or the time
-          limit runs out, the game is over.
-        </p>
+        <h2>Read Description before starting</h2>
+        <ol>
+          <li><b>Start the Game:</b> Press the Start button to begin.</li>
+          <li>
+            <b>Watch the Sequence:</b> A colored button will flash. Remember the
+            order of the flashes.
+          </li>
+          <li>
+            <b>Repeat the Sequence:</b> After the sequence finishes, click the
+            colored buttons in the same order they appeared.
+          </li>
+          <li>
+            <b>New Step Added:</b> With each correct round, a new flash will be
+            added to the sequence.
+          </li>
+          <li>
+            <b>Keep Going:</b> Continue repeating the longer sequence without
+            making a mistake.
+          </li>
+          <li>
+            <b>Game Over:</b> If you press the wrong button or get the sequence
+            wrong, the game ends. Try again to improve your score!
+          </li>
+        </ol>
         <button id="start">Start</button>
       </div>
     </div>
@@ -35,6 +51,7 @@
         <div class="blue box" id="blue" type="button">4</div>
       </div>
     </div>
+    <button id="begin">Start Game</button>
     <script src="app.js"></script>
   </body>
 </html>

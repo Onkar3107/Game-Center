@@ -1,3 +1,6 @@
+let btns = document.querySelectorAll(".box");
+let h2 = document.querySelector("h2");
+
 let gameSeq = [];
 let userSeq = [];
 
@@ -7,16 +10,29 @@ let level = 0;
 let started = false;
 let highScore = 0;
 
-let h2 = document.querySelector("h2");
+disableAllBtn();
 
-document.addEventListener("keypress", function () {
+document.querySelector("#begin").addEventListener("click", function () {
   if (!started) {
+    enableAllBtn();
     console.log("Game Started");
     started = true;
 
     levelUp();
   }
 });
+
+function disableAllBtn() {
+  btns.forEach((btn) => {
+    btn.classList.add("disabled"); // Add a class to simulate disabled state
+  });
+}
+
+function enableAllBtn() {
+  btns.forEach((btn) => {
+    btn.classList.remove("disabled"); // Remove the class to enable again
+  });
+}
 
 function gameFlash(btn) {
   btn.classList.add("flash");
@@ -55,7 +71,8 @@ function checkAns(lastInx) {
     }
   } else {
     console.log("Game Over");
-    h2.innerHTML = `Game Over! Your Score was <b><i>${level}</i></b> <br> Press any key to restart`;
+    h2.innerHTML = `Game Over! Your Score was <b><i>${level}</i></b> <br> Press Play Again to Restart`;
+    document.querySelector("#begin").innerText = "Play Again";
     document.querySelector("body").style.backgroundColor = "red";
     setTimeout(() => {
       document.querySelector("body").style.backgroundColor = "white";
@@ -75,8 +92,6 @@ function btnPress() {
   checkAns(userSeq.length - 1);
 }
 
-let btns = document.querySelectorAll(".box");
-
 for (let btn of btns) {
   btn.addEventListener("click", btnPress);
 }
@@ -86,6 +101,7 @@ function reset() {
   gameSeq = [];
   userSeq = [];
   level = 0;
+  disableAllBtn();
 }
 
 function updateHighScore(score) {
@@ -96,7 +112,6 @@ function updateHighScore(score) {
     h3.innerHTML = `High Score: <b><i>${highScore}</i></b>`;
   }
 }
-
 
 // Display the Steps to play the game
 let div = document.querySelector(".main");
@@ -109,9 +124,9 @@ window.onload = function () {
   }, 1500);
 
   start.addEventListener("click", function () {
-    setTimeout( () => {
+    console.log("Start Clicked");
+    setTimeout(() => {
       div.style.display = "none";
     }, 500);
   });
-  
-}
+};

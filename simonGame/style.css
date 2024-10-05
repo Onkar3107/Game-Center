@@ -1,64 +1,67 @@
 body {
-    text-align: center;
+  text-align: center;
 }
 
 .btn-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .box {
-    height: 200px;
-    width: 200px;
-    border: 10px solid black;
-    border-radius: 20%;
-    margin: 2rem;
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%;
+  margin: 2rem;
 }
 
 .red {
-    background-color: #d95980;
+  background-color: #d95980;
 }
 
 .green {
-    background-color: #63aac0;
+  background-color: #63aac0;
 }
 
 .yellow {
-    background-color: #f99b45;
+  background-color: #f99b45;
 }
 
 .blue {
-    background-color: #819ff9;
+  background-color: #819ff9;
 }
 
 .flash {
-    background-color: white;
-    /* opacity: 0.3; */
+  background-color: white;
+  /* opacity: 0.3; */
 }
 
 .userFlash {
-    background-color: green;
+  background-color: green;
+}
+
+.disabled {
+  pointer-events: none;
 }
 
 .main {
-    margin: 20vmin;
-    border: 1px solid black;
-    z-index: 1;
-    position: fixed;
-    background-color: #7b506f;
+  margin: 20vmin;
+  border: 1px solid black;
+  z-index: 1;
+  position: fixed;
+  background-color: #7b506f;
 }
 
-.main p {
-    color: #ead7d1;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 2vmin;
+.main ol {
+  /* list-style-type: none; */
+  text-align: left;
+  padding: 4vmin;
 }
 
 .main button {
-    color: #7b506f;
-    background-color: #ead7d1;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 2vmin;
+  color: #7b506f;
+  background-color: #ead7d1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 2vmin;
 }
